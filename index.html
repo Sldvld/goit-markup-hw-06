@@ -333,29 +333,81 @@
 </footer>
 <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-        <form class="register-form">
-            <h2 class="form-name">Залиште свої дані, ми вам передзвонимо</h2>
-            <p class="form-field">
-                
+            <form class="register-form">
+                <h2 class="form-name">Залиште свої дані, ми вам передзвонимо</h2>
+        <div class="form-outbox">
                 <label for="name" class="form-label">Ім'я</label>
-                <input type="text" name="name" id="name" class="form-input">
+            <div class="form-field">
+                <input 
+                type="text" 
+                name="name" 
+                id="name" 
+                required
+                minlength="3"
+                maxlength="20"
+                title="Введіть значення в форматі: Ім'я Прізвище"
+                class="form-input">
                 <svg class="icon-reg">
-                    <use href="./images/sprite.svg#icon-telegramm" width="12px" height="12px"></use>
+                    <use href="./images/sprite.svg#icon-person-black" width="18px" height="18px"></use>
                 </svg>
-            </p>
-            <p class="form-field">
+            </div>
+        </div>
+        <div class="form-outbox">
                 <label for="tel" class="form-label">Телефон</label>
-                <input type="tel" name="tel" id="tel" class="form-input">
-            </p>
-            <p class="form-field">
+            <div class="form-field">
+                <input 
+                type="tel" 
+                name="tel" 
+                id="tel" 
+                required
+                pattern="^\+[0-9]{12}"
+                title="Введіть значення в форматі: +3 80 00 000 00 00"
+                class="form-input">
+                <svg class="icon-reg">
+                    <use href="./images/sprite.svg#icon-phone" width="18px" height="18px"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="form-outbox">
                 <label for="email" class="form-label">Пошта</label>
-                <input type="email" name="email" id="email" class="form-input">
-            </p>
-            <p class="form-field">
-                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введіть текст" class="form-textarea"></textarea>
-            </p>
-            <input type="checkbox" name="accept" value="accept" id="accept">
-                <label for="accept">Погоджуюся з розсилкою та приймаю Умови договору</label>
+            <div class="form-field">
+                <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                required
+                title="Введіть значення в форматі: "
+                class="form-input">
+                <svg class="icon-reg">
+                    <use href="./images/sprite.svg#icon-email" width="18px" height="18px"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="textarea-outbox">
+            <label for="comment" class="form-label">Коментар</label>
+                <textarea 
+                name="comment" 
+                id="comment" 
+                cols="30" 
+                rows="10" 
+                placeholder="Введіть текст" 
+                class="form-textarea">
+                </textarea>
+        </div>
+        <div class="checkbox-position">
+            <input class="checkbox-input" 
+            type="checkbox" 
+            name="accept" 
+            value="accept" 
+            id="accept">
+            <span class="icon-checkbox"></span>
+    
+                <label 
+                class="checkbox-label" 
+                for="accept">Погоджуюся з розсилкою та приймаю 
+                <a href="#" class="conditions">Умови договору</a>
+                </label>
+            </div>
                 <button type="submit" class="send">Відправити</button>
         </form>
         <button class="close-modal" type="button" data-modal-close>
