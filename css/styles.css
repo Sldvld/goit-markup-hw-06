@@ -803,6 +803,7 @@ img {
     display: flex;
 
     width: 100%;
+    height: 40px;
     margin: 0;
     padding: 14px 15px 14px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -819,10 +820,9 @@ img {
 
 .form-label {
     font-family: 'Roboto';
-    
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.67;
+    line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--secondary-text-color);
 }
@@ -842,7 +842,6 @@ img {
 }
 .checkbox-position {
     display: flex;
-    position: relative;
     align-items: center;
     justify-content: center;
 }
@@ -854,14 +853,15 @@ img {
     align-items: center;
     position: relative;
     display: block;
-    margin-left: 25px;
+    margin-left: 7px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
     color: var(--secondary-text-color);
 }
 .icon-checkbox {
     display: block;
-    position: absolute;
-    top: 0;
-    left: 7px;
     width: 16px;
     height: 15px;
     border: 2px solid #212121;
@@ -874,6 +874,7 @@ img {
     background-size: contain;
     background-origin: border-box;
 }
+
 .conditions {
     color: var(--brand-color);
 }
